@@ -30,9 +30,10 @@ handler.setLevel(logging.INFO)  # Set handler level to INFO
 logger.addHandler(handler)
 
 def embed_data(property_name, url):
+    documents = []
     if os.path.exists('./storage/documents.json'):
         documents = load_docs_from_json('./storage/documents.json', url)
-        
+
     if documents:
         documents = [tranform_dataset_item(doc) for doc in documents]
     else:
