@@ -30,8 +30,9 @@ handler.setLevel(logging.INFO)  # Set handler level to INFO
 logger.addHandler(handler)
 
 def embed_data(property_name, url):
-
-    documents = load_docs_from_json('./storage/documents.json', url)
+    if os.path.exists('./storage/documents.json'):
+        documents = load_docs_from_json('./storage/documents.json', url)
+        
     if documents:
         documents = [tranform_dataset_item(doc) for doc in documents]
     else:
@@ -43,7 +44,7 @@ def embed_data(property_name, url):
             run_input={"startUrls": [{"url": url}],},
             dataset_mapping_function=tranform_dataset_item,
         )
-        
+
         """
         documents = reader.load_data(
             actor_id="apify/web-scraper",
