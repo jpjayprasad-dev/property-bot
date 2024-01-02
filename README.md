@@ -7,8 +7,8 @@ This project implements a chatbot that serves as an AI real estate agent. The ch
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your_username/real-estate-chatbot.git
-   cd real-estate-chatbot
+   git clone https://github.com/jpjayprasad-dev/property-bot
+   cd property-bot
    ```
 
 2. Install dependencies:
