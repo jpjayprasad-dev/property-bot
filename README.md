@@ -1,4 +1,4 @@
-# Real Estate Chatbot
+# RealEstateChat AI Assistant
 
 This project implements a chatbot that serves as an AI real estate agent. The chatbot can answer queries about various real estate properties.
 
